@@ -1,4 +1,5 @@
 import model.factory.BrieUpdater
+import model.factory.PassUpdater
 
 class GildedRose(var items: List<Item>) {
 
@@ -10,17 +11,7 @@ class GildedRose(var items: List<Item>) {
                     BrieUpdater().update(item)
                 }
                 "Backstage passes to a TAFKAL80ETC concert" -> {
-                    increaseQuality(item)
-                    if (item.sellIn < 11) {
-                        increaseQuality(item)
-                    }
-                    if (item.sellIn < 6) {
-                        increaseQuality(item)
-                    }
-                    item.sellIn -= 1
-                    if (item.sellIn < 0) {
-                        item.quality = 0
-                    }
+                    PassUpdater().update(item)
                 }
                 "Sulfuras, Hand of Ragnaros" -> {}
                 else -> {
@@ -37,12 +28,6 @@ class GildedRose(var items: List<Item>) {
     private fun decreaseQuality(item: Item) {
         if (item.quality > 0) {
             item.quality -= 1
-        }
-    }
-
-    private fun increaseQuality(item: Item) {
-        if (item.quality < 50) {
-            item.quality += 1
         }
     }
 
