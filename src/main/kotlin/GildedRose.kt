@@ -1,4 +1,5 @@
 import model.factory.BrieUpdater
+import model.factory.GenericUpdater
 import model.factory.PassUpdater
 import model.factory.SulfurasUpdater
 
@@ -11,20 +12,8 @@ class GildedRose(var items: List<Item>) {
                 "Aged Brie" -> BrieUpdater().update(item)
                 "Backstage passes to a TAFKAL80ETC concert" -> PassUpdater().update(item)
                 "Sulfuras, Hand of Ragnaros" -> SulfurasUpdater().update(item)
-                else -> {
-                    decreaseQuality(item)
-                    item.sellIn -= 1
-                    if (item.sellIn < 0) {
-                        decreaseQuality(item)
-                    }
-                }
+                else -> GenericUpdater().update(item)
             }
-        }
-    }
-
-    private fun decreaseQuality(item: Item) {
-        if (item.quality > 0) {
-            item.quality -= 1
         }
     }
 
