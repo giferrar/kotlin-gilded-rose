@@ -1,3 +1,5 @@
+import model.factory.BrieUpdater
+
 class GildedRose(var items: List<Item>) {
 
     fun updateQuality() {
@@ -5,11 +7,7 @@ class GildedRose(var items: List<Item>) {
             // TODO next we will implement object updaters that we will later use in a factory method
             when (item.name) {
                 "Aged Brie" -> {
-                    increaseQuality(item)
-                    item.sellIn -= 1
-                    if (item.sellIn < 0) {
-                        increaseQuality(item)
-                    }
+                    BrieUpdater().update(item)
                 }
                 "Backstage passes to a TAFKAL80ETC concert" -> {
                     increaseQuality(item)
