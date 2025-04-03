@@ -9,17 +9,15 @@ class GildedRose(var items: List<Item>) {
             } else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
                 if (item.quality < 50) {
                     item.quality += 1
-
-                    if (item.sellIn < 11) {
-                        if (item.quality < 50) {
-                            item.quality += 1
-                        }
+                }
+                if (item.sellIn < 11) {
+                    if (item.quality < 50) {
+                        item.quality += 1
                     }
-
-                    if (item.sellIn < 6) {
-                        if (item.quality < 50) {
-                            item.quality += 1
-                        }
+                }
+                if (item.sellIn < 6) {
+                    if (item.quality < 50) {
+                        item.quality += 1
                     }
                 }
             } else if (item.name != "Sulfuras, Hand of Ragnaros") {
