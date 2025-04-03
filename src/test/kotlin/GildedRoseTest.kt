@@ -27,6 +27,7 @@ class GildedRoseTest {
             Arguments.of(Item("Backstage passes to a TAFKAL80ETC concert", 0, 20), Item("Backstage passes to a TAFKAL80ETC concert", -1, 0)),
             Arguments.of(Item("Backstage passes to a TAFKAL80ETC concert", 20, 20), Item("Backstage passes to a TAFKAL80ETC concert", 19, 21)),
             Arguments.of(Item("Backstage passes to a TAFKAL80ETC concert", 5, 49), Item("Backstage passes to a TAFKAL80ETC concert", 4, 50)),
+            Arguments.of(Item("Backstage passes to a TAFKAL80ETC concert", 5, 50), Item("Backstage passes to a TAFKAL80ETC concert", 4, 50)),
             Arguments.of(Item("foo", 0, 2), Item("foo", -1, 0)),
             Arguments.of(Item("foo", 0, 0), Item("foo", -1, 0))
         )
