@@ -2,9 +2,9 @@ package model.factory
 
 import Item
 
-class GenericUpdater: ItemUpdater() {
+class GenericUpdater(val item: Item): ItemUpdater() {
 
-    override fun update(item: Item) {
+    override fun update() {
         decreaseQuality(item)
         item.sellIn -= 1
         if (item.sellIn < 0) {

@@ -4,7 +4,7 @@ import Item
 
 abstract class ItemUpdater {
 
-    abstract fun update(item: Item)
+    abstract fun update()
 
     internal fun decreaseQuality(item: Item) {
         if (item.quality > 0) {

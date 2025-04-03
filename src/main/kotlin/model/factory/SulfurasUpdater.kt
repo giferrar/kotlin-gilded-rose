@@ -2,8 +2,8 @@ package model.factory
 
 import Item
 
-class SulfurasUpdater: ItemUpdater() {
+class SulfurasUpdater(val item: Item): ItemUpdater() {
 
-    override fun update(item: Item) {}
+    override fun update() {}
 
 }

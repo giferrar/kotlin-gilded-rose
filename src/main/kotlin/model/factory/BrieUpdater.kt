@@ -2,9 +2,9 @@ package model.factory
 
 import Item
 
-class BrieUpdater: ItemUpdater() {
+class BrieUpdater(val item: Item): ItemUpdater() {
 
-    override fun update(item: Item) {
+    override fun update() {
         increaseQuality(item)
         item.sellIn -= 1
         if (item.sellIn < 0) {

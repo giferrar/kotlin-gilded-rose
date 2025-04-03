@@ -2,9 +2,9 @@ package model.factory
 
 import Item
 
-class PassUpdater: ItemUpdater() {
+class PassUpdater(val item: Item): ItemUpdater() {
 
-    override fun update(item: Item) {
+    override fun update() {
         increaseQuality(item)
         if (item.sellIn < 11) {
             increaseQuality(item)
