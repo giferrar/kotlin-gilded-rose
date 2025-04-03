@@ -31,7 +31,8 @@ class GildedRoseTest {
             Arguments.of(Item("foo", 0, 2), Item("foo", -1, 0)),
             Arguments.of(Item("foo", 0, 0), Item("foo", -1, 0)),
             Arguments.of(Item("foo", 2, 0), Item("foo", 1, 0)),
-            Arguments.of(Item("Conjured Mana Cake", 3, 6), Item("Conjured Mana Cake", 2, 4))
+            Arguments.of(Item("Conjured Mana Cake", 3, 6), Item("Conjured Mana Cake", 2, 4)),
+            Arguments.of(Item("Conjured Mana Cake", 0, 6), Item("Conjured Mana Cake", -1, 2))
         )
 
         fun getUpdatedItem(actual: Item): Item {
