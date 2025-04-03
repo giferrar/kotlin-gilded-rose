@@ -19,7 +19,7 @@ To solve the kata you have to proceed as follows:
 
 You can find my solution to the kata together with some commentary in the branche `solutions`.
 
-## Some words about testing
+## 🧑🏻‍🏫 Some words about testing
 
 ### Reuse Test class
 The Test class is annotated with:
@@ -136,18 +136,20 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 - __"Conjured"__ items degrade in `Quality` twice as fast as normal items
 
+👺
 Feel free to make any changes to the `UpdateQuality` method and add any new code as long as everything
 still works correctly. However, do not alter the `Item` class or `Items` property as those belong to the
 goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code
 ownership (you can make the `UpdateQuality` method and `Items` property static if you like, we'll cover
 for you).
+👺
 
 Just for clarification, an item can never have its `Quality` increase above `50`, however __"Sulfuras"__ is a
 legendary item and as such its `Quality` is `80` and it never alters.
 
 ---
 
-## Sources
+## 📚 Sources and suggested readingd
 
 [Gilded Rose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata), by Emily Bache
 
