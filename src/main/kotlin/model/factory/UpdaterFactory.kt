@@ -9,6 +9,7 @@ class UpdaterFactory {
                 "Aged Brie" -> BrieUpdater(item)
                 "Backstage passes to a TAFKAL80ETC concert" -> PassUpdater(item)
                 "Sulfuras, Hand of Ragnaros" -> SulfurasUpdater(item)
+                "Conjured Mana Cake" -> ConjuredUpdater(item)
                 else -> GenericUpdater(item)
             }
         }
