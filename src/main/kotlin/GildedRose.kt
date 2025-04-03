@@ -23,12 +23,22 @@ class GildedRose(var items: List<Item>) {
                 else -> item.sellIn -= 1
             }
 
-            if (item.sellIn < 0) {
-                when (item.name) {
-                    "Aged Brie" -> increaseQuality(item)
-                    "Backstage passes to a TAFKAL80ETC concert" -> item.quality = 0
-                    "Sulfuras, Hand of Ragnaros" -> {}
-                    else -> decreaseQuality(item)
+            when (item.name) {
+                "Aged Brie" -> {
+                    if (item.sellIn < 0) {
+                        increaseQuality(item)
+                    }
+                }
+                "Backstage passes to a TAFKAL80ETC concert" -> {
+                    if (item.sellIn < 0) {
+                        item.quality = 0
+                    }
+                }
+                "Sulfuras, Hand of Ragnaros" -> {}
+                else -> {
+                    if (item.sellIn < 0) {
+                        decreaseQuality(item)
+                    }
                 }
             }
         }
