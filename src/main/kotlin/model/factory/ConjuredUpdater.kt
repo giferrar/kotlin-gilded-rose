@@ -9,7 +9,8 @@ class ConjuredUpdater(val item: Item): ItemUpdater() {
         decreaseQuality(item)
         item.sellIn -= 1
         if (item.sellIn < 0) {
-            item.quality = 2
+            decreaseQuality(item)
+            decreaseQuality(item)
         }
     }
 
