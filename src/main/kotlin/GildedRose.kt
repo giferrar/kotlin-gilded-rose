@@ -22,11 +22,9 @@ class GildedRose(var items: List<Item>) {
                         }
                     }
                 }
-            } else {
+            } else if (item.name != "Sulfuras, Hand of Ragnaros") {
                 if (item.quality > 0) {
-                    if (item.name != "Sulfuras, Hand of Ragnaros") {
-                        item.quality -= 1
-                    }
+                    item.quality -= 1
                 }
             }
 
@@ -39,15 +37,11 @@ class GildedRose(var items: List<Item>) {
                     if (item.quality < 50) {
                         item.quality += 1
                     }
-                } else {
-                    if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
+                } else if (item.name == "Backstage passes to a TAFKAL80ETC concert") {
                         item.quality = 0
-                    } else {
-                        if (item.quality > 0) {
-                            if (item.name != "Sulfuras, Hand of Ragnaros") {
-                                item.quality -= 1
-                            }
-                        }
+                } else if (item.name != "Sulfuras, Hand of Ragnaros") {
+                    if (item.quality > 0) {
+                        item.quality -= 1
                     }
                 }
             }
